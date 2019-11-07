@@ -11,6 +11,11 @@ class AboutCommand : Command {
         event.channel.sendMessage(
             EmbedBuilder()
                 .setDescription("Version 2 of the osu! discord bot Abaguelle.\nCreated by Gregg#1174")
+                .addField(
+                    "Open Source Links",
+                    "[kdbf](https://github.com/GreggKr/kdbf)\n[Abaguelle](https://github.com/GreggKr/Abaguelle)",
+                    true
+                )
                 .build()
         ).queue()
     }
