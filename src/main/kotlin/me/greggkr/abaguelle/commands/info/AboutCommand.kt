@@ -1,4 +1,4 @@
-package me.greggkr.abaguelle.commands
+package me.greggkr.abaguelle.commands.info
 
 import me.greggkr.kdbf.command.Command
 import me.greggkr.kdbf.command.CommandData
