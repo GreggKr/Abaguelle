@@ -13,7 +13,7 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    implementation "com.github.GreggKr:kdbf:db89d92"
+    implementation "com.github.GreggKr:kdbf:5e072e8"
     implementation "net.dv8tion:JDA:4.0.0_55"
     implementation "com.github.GreggKr:osu4j:fbae7ad"
 }
