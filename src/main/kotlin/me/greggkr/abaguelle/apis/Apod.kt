@@ -2,21 +2,16 @@ package me.greggkr.abaguelle.apis
 
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
+import me.greggkr.abaguelle.util.addQueryParameter
 import me.greggkr.kdbf.config
 import okhttp3.OkHttpClient
 import okhttp3.Request
 
 private const val URL = "https://api.nasa.gov/planetary/apod"
-private val client = OkHttpClient.Builder()
-    .addInterceptor {
-        it.proceed(
-            it.request().newBuilder().url(
-                it.request().url.newBuilder()
-                    .addQueryParameter("api_key", config.getOrDefault("nasa_key", "DEMO_KEY") as String)
-                    .build()
-            ).build()
-        )
-    }.build()
+private val client =
+    OkHttpClient.Builder()
+        .addQueryParameter("api_key", config.getOrDefault("nasa_key", "DEMO_KEY") as String)
+        .build()
 
 data class ApodResponse(
     @SerializedName("copyright") val copyright: String,
